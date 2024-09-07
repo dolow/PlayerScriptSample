@@ -1,0 +1,3 @@
+$.onInteract((playerHandle) => {
+  $.setPlayerScript(playerHandle);
+});

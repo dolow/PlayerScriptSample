@@ -1,0 +1,7 @@
+# PlayerScriptSample
+
+TBD
+
+# License
+
+MIT
