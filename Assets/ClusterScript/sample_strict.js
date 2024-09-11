@@ -92,11 +92,9 @@ const customEmoteState = {
  * setPlayerScript 直後の処理
  * サンプル動作用のボタンを表示します
  */
-_.onStart(() => {
-  _.showButton(config.sampleButtunAssign.camera, _.iconAsset(iconName.cameraDefault));
-  _.showButton(config.sampleButtunAssign.customEmote, _.iconAsset(iconName.jumpPlay));
-  _.showButton(config.sampleButtunAssign.message, _.iconAsset(iconName.messageOff));
-});
+_.showButton(config.sampleButtunAssign.camera, _.iconAsset(iconName.cameraDefault));
+_.showButton(config.sampleButtunAssign.customEmote, _.iconAsset(iconName.jumpPlay));
+_.showButton(config.sampleButtunAssign.message, _.iconAsset(iconName.messageOff));
 
 
 /**
