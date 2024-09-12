@@ -618,7 +618,7 @@ MonoBehaviour:
   humanoidAnimations:
   - id: jump
     animation: {fileID: -203655887218126122, guid: 1270b628790494618bfe77a140ac1928, type: 3}
-    humanoidAnimation: {fileID: 11400000, guid: 2fefd0ad12e9046c5b794df13f1c28c6, type: 2}
+    humanoidAnimation: {fileID: 11400000, guid: 33e98d9b15baa4f62aca83d13349943a, type: 2}
 --- !u!114 &706487775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -841,7 +841,7 @@ MonoBehaviour:
   humanoidAnimations:
   - id: jump
     animation: {fileID: -203655887218126122, guid: 1270b628790494618bfe77a140ac1928, type: 3}
-    humanoidAnimation: {fileID: 11400000, guid: 2fefd0ad12e9046c5b794df13f1c28c6, type: 2}
+    humanoidAnimation: {fileID: 11400000, guid: 33e98d9b15baa4f62aca83d13349943a, type: 2}
 --- !u!114 &1431026219
 MonoBehaviour:
   m_ObjectHideFlags: 0
