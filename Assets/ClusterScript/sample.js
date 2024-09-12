@@ -25,7 +25,7 @@ _.onButton(0, (isDown) => {
 
   // ボタンを押す毎にカメラのモードを切り替える
   if (cameraEnabled) {
-    const y = calcurateAvatarScreenPositionYByAvatarHeight();
+    let y = calcurateAvatarScreenPositionYByAvatarHeight();
 
     _.cameraHandle.setThirdPersonDistance(0.7, false);
     _.cameraHandle.setThirdPersonAvatarScreenPosition(new Vector2(0.3, y), false);
@@ -43,8 +43,8 @@ _.onButton(0, (isDown) => {
  * 再生中にもう一度ボタンを押すと最初からの再生になります。
  */
 let emoteDuration = -1;
-const animation = _.humanoidAnimation("jump");
-const animationLength = animation.getLength();
+let animation = _.humanoidAnimation("jump");
+let animationLength = animation.getLength();
 _.onButton(1, (isDown) => {
   if (!isDown) {
     return;
@@ -64,7 +64,7 @@ _.onButton(2, (isDown) => {
     return;
   }
 
-  const reference = _.worldItemReference("message_sample");
+  let reference = _.worldItemReference("message_sample");
   _.sendTo(reference, "add_velocity", 100);
 });
 
@@ -78,7 +78,7 @@ _.onFrame(dt => {
     return;
   }
 
-  const pose = animation.getSample(emoteDuration);
+  let pose = animation.getSample(emoteDuration);
   _.setHumanoidPoseOnFrame(pose, 1.0);
 
   emoteDuration += dt;
@@ -89,9 +89,9 @@ _.onFrame(dt => {
 
 // setThirdPersonAvatarScreenPosition 用のいい感じの Y 軸位置を計算する関数
 function calcurateAvatarScreenPositionYByAvatarHeight() {
-  const headPos = _.getHumanoidBonePosition(HumanoidBone.Head);
-  const pos = _.getPosition();
-  const height = headPos.sub(pos).y;
+  let headPos = _.getHumanoidBonePosition(HumanoidBone.Head);
+  let pos = _.getPosition();
+  let height = headPos.sub(pos).y;
 
   if (height <= 0.7) {
     return 1.0;
